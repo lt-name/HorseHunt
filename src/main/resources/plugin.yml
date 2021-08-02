@@ -1,6 +1,6 @@
 name: HorseHunt
 main: cn.lanink.horsehunt.HorseHunt
-version: "0.0.1-SNAPSHOT"
+version: "0.0.2"
 api:
   - 1.0.0
 load: POSTWORLD
