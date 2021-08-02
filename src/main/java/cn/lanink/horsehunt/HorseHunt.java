@@ -93,7 +93,7 @@ public class HorseHunt extends PluginBase {
         this.loadRooms();
         
         try {
-            new MetricsLite(this, 7464);
+            new MetricsLite(this, 12309);
         } catch (Exception ignored) {
         
         }
