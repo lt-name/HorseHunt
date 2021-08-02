@@ -68,7 +68,9 @@ public class PlayerGameListener implements Listener {
             if (room == null || !room.isPlaying(player)) {
                 return;
             }
-            if (event.getVehicle().getHeight() > 0) {
+            if (event.getVehicle().getHeight() > 0 &&
+                    room.getMode() == 2 &&
+                    room.getPlayers(player) == PlayerStatus.SURVIVE) {
                 //TODO Fix
                 //event.setCancelled(true);
                 Server.getInstance().getScheduler().scheduleDelayedTask(this.horseHunt,

@@ -141,6 +141,9 @@ public class Room {
         if (HorseHunt.getInstance().isHasTips()) {
             Tips.removeTipsConfig(this.level, player);
         }
+        if (player.riding != null) {
+            player.riding.dismountEntity(player);
+        }
         player.teleport(Server.getInstance().getDefaultLevel().getSafeSpawn());
         Tools.rePlayerState(player, false);
         SavePlayerInventory.restore(HorseHunt.getInstance(), player);

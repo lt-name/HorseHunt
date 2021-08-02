@@ -99,11 +99,14 @@ public class HorseHuntListener implements Listener {
     public void onPlayerDeath(HorseHuntPlayerDeathEvent event) {
         Player player = event.getPlayer();
         Room room = event.getRoom();
+        room.addPlaying(player, PlayerStatus.DEATH);
+        if (player.riding != null) {
+            player.riding.dismountEntity(player);
+        }
         player.getInventory().clearAll();
         player.setAllowModifyWorld(true);
         player.setAdventureSettings((new AdventureSettings(player)).set(AdventureSettings.Type.ALLOW_FLIGHT, true));
         player.setGamemode(3);
-        room.addPlaying(player, PlayerStatus.DEATH);
         Tools.setPlayerInvisible(player, true);
         player.getLevel().addParticle(new HugeExplodeSeedParticle(player));
         Tools.playSound(room, Sound.RANDOM_EXPLODE);
