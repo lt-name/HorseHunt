@@ -12,7 +12,7 @@ public class UserCommand extends BaseCommand {
 
     public UserCommand(String name) {
         super(name, "HorseHunt 游戏命令");
-        this.setPermission("HotPotato.command.user");
+        this.setPermission("HorseHunt.command.user");
 
         this.addSubCommand(new Join("join"));
         this.addSubCommand(new Quit("quit"));

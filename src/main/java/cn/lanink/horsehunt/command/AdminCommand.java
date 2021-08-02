@@ -10,7 +10,7 @@ public class AdminCommand extends BaseCommand {
 
     public AdminCommand(String name) {
         super(name, "HorseHunt 管理命令");
-        this.setPermission("HotPotato.command.admin");
+        this.setPermission("HorseHunt.command.admin");
 
         this.addSubCommand(new SetWaitSpawn("setwaitspawn"));
         this.addSubCommand(new AddRandomSpawn("addrandomspawn"));
