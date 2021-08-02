@@ -79,8 +79,8 @@ public class HorseHunt extends PluginBase {
 
         }
         
-        this.cmdUser = this.config.getString("插件命令", "hotpotato");
-        this.cmdAdmin = this.config.getString("管理命令", "hotpotatoadmin");
+        this.cmdUser = this.config.getString("插件命令", "HorseHunt");
+        this.cmdAdmin = this.config.getString("管理命令", "HorseHuntAdmin");
         this.getServer().getCommandMap().register("", new UserCommand(this.cmdUser));
         this.getServer().getCommandMap().register("", new AdminCommand(this.cmdAdmin));
     

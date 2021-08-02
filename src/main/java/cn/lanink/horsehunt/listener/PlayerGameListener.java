@@ -69,7 +69,8 @@ public class PlayerGameListener implements Listener {
                 return;
             }
             if (event.getVehicle().getHeight() > 0) {
-                event.setCancelled(true);
+                //TODO Fix
+                //event.setCancelled(true);
                 Server.getInstance().getScheduler().scheduleDelayedTask(this.horseHunt,
                         () -> event.getVehicle().mountEntity(player), 1);
             }
