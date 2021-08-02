@@ -1,0 +1,20 @@
+name: HorseHunt
+main: cn.lanink.horsehunt.HorseHunt
+version: "1.0.0-SNAPSHOT"
+api:
+  - 1.0.0
+load: POSTWORLD
+author: "LT_Name"
+
+depend:
+  - "MobPlugin"
+softdepend:
+  - "ScoreboardPlugin"
+  - "ScoreboardAPI"
+  - "Tips"
+
+permissions:
+  HorseHunt.command.user:
+    default: true
+  HorseHunt.command.admin:
+    default: op
