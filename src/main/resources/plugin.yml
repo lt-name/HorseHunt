@@ -7,6 +7,7 @@ load: POSTWORLD
 author: "LT_Name"
 
 depend:
+  - "MemoriesOfTime-GameCore"
   - "MobPlugin"
 softdepend:
   - "ScoreboardPlugin"
